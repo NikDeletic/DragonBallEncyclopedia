@@ -65,6 +65,18 @@ fun CharacterScreenContent(
         }
     }
 
+    LaunchedEffect(key1 = state.successfullyAddedToDatabase) {
+        if (state.successfullyAddedToDatabase) {
+            Toast.makeText(context, "Successfully added to favorites!", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    LaunchedEffect(key1 = state.successfullyDeletedFromDatabase) {
+        if (state.successfullyDeletedFromDatabase) {
+            Toast.makeText(context, "Successfully deleted from favorites!", Toast.LENGTH_SHORT).show()
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -86,7 +98,15 @@ fun CharacterScreenContent(
                 .padding(top = DragonBallTheme.dimens.mainPadding),
             buttonText = "Add to favorites",
             backgroundColor = Brush.verticalGradient(DragonBallTheme.colors.redButtonBgGradient),
-            onClick = { onAction(CharacterScreenAction.AddCharacterToFavorites(state.loadedCharacter.characterId)) }
+            onClick = { onAction(CharacterScreenAction.AddCharacterToFavorites(state.loadedCharacter)) }
+        )
+
+        CustomButton(
+            modifier = Modifier
+                .padding(top = DragonBallTheme.dimens.mainPadding),
+            buttonText = "Remove from favorites",
+            backgroundColor = Brush.verticalGradient(DragonBallTheme.colors.redButtonBgGradient),
+            onClick = { onAction(CharacterScreenAction.RemoveCharacterFromFavorites(state.loadedCharacter)) }
         )
 
         CharacterStats(
@@ -97,7 +117,8 @@ fun CharacterScreenContent(
 
         CustomButton(
             modifier = Modifier
-                .padding(top = DragonBallTheme.dimens.mainPadding),
+                .padding(top = DragonBallTheme.dimens.mainPadding)
+                .systemBarsPadding(),
             buttonText = "Back",
             backgroundColor = Brush.verticalGradient(DragonBallTheme.colors.redButtonBgGradient),
             onClick = { onAction(CharacterScreenAction.CloseScreen) }

@@ -14,6 +14,9 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import rs.nikoladeletic.dragonballencyclopedia.di.charactersRepositoryModule
+import rs.nikoladeletic.dragonballencyclopedia.di.databaseModule
+import rs.nikoladeletic.dragonballencyclopedia.di.localCharactersRepositoryModule
+import rs.nikoladeletic.dragonballencyclopedia.di.networkCheckerModule
 import rs.nikoladeletic.dragonballencyclopedia.di.networkModule
 import rs.nikoladeletic.dragonballencyclopedia.di.viewModelModule
 
@@ -26,8 +29,11 @@ class App: Application(), SingletonImageLoader.Factory {
             androidContext(this@App)
             modules(
                 networkModule,
+                databaseModule,
+                networkCheckerModule,
                 charactersRepositoryModule,
-                viewModelModule
+                localCharactersRepositoryModule,
+                viewModelModule,
             )
         }
     }

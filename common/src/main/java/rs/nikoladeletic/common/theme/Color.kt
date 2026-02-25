@@ -6,8 +6,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 
-val BurgundyBackground = Color(0xFF62272D)
-val LightBurgundyBackground = Color(0xFF620E17)
 val PurpleBackground = Color(0xFF1E0E2E)
 val PrimaryTextColor = Color.White
 val ErrorColor = Color(0xFFFF3636)
@@ -46,8 +44,6 @@ val GrayButtonBgGradient = listOf(
 
 @Stable
 class DragonBallColors(
-    burgundyBackground: Color,
-    lightBurgundyBackground: Color,
     primaryText: Color,
     redButtonBgGradient: List<Color>,
     orangeButtonBgGradient: List<Color>,
@@ -56,12 +52,6 @@ class DragonBallColors(
     purpleBackground: Color,
     errorColor: Color,
 ) {
-    var burgundyBackground by mutableStateOf(burgundyBackground)
-        private set
-
-    var lightBurgundyBackground by mutableStateOf(lightBurgundyBackground)
-        private set
-
     var primaryText by mutableStateOf(primaryText)
         private set
 
@@ -84,8 +74,6 @@ class DragonBallColors(
         private set
 
     internal fun update(other: DragonBallColors) {
-        burgundyBackground = other.burgundyBackground
-        lightBurgundyBackground = other.lightBurgundyBackground
         primaryText = other.primaryText
         orangeButtonBgGradient = other.orangeButtonBgGradient
         redButtonBgGradient = other.redButtonBgGradient
@@ -96,8 +84,6 @@ class DragonBallColors(
     }
 
     internal fun copy(): DragonBallColors = DragonBallColors(
-        burgundyBackground = burgundyBackground,
-        lightBurgundyBackground = lightBurgundyBackground,
         primaryText = primaryText,
         redButtonBgGradient = redButtonBgGradient,
         orangeButtonBgGradient = orangeButtonBgGradient,
@@ -109,8 +95,6 @@ class DragonBallColors(
 }
 
 internal val dragonBallColorPaletteLight = DragonBallColors(
-    burgundyBackground = BurgundyBackground,
-    lightBurgundyBackground = LightBurgundyBackground,
     primaryText = PrimaryTextColor,
     redButtonBgGradient = RedButtonBgGradient,
     orangeButtonBgGradient = OrangeButtonBgGradient,
@@ -121,8 +105,6 @@ internal val dragonBallColorPaletteLight = DragonBallColors(
 )
 
 internal val dragonBallColorPaletteDark = DragonBallColors(
-    burgundyBackground = BurgundyBackground,
-    lightBurgundyBackground = LightBurgundyBackground,
     primaryText = PrimaryTextColor,
     orangeButtonBgGradient = OrangeButtonBgGradient,
     greenButtonBgGradient = GreenButtonBgGradient,

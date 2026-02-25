@@ -23,8 +23,7 @@ fun CustomLoader(
     ) {
         CircularProgressIndicator(
             modifier = Modifier.align(Alignment.Center),
-            color = DragonBallTheme.colors.burgundyBackground,
-            trackColor = DragonBallTheme.colors.purpleBackground
+            color = DragonBallTheme.colors.purpleBackground,
         )
     }
 }
