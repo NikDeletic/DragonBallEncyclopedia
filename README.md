@@ -28,11 +28,11 @@ This structure was intentionally chosen to ensure long-term maintainability and 
 # Notes
 
 I would like to formally apologize for submitting this project later than expected.
-Unfortunately, I experienced significant performance issues with my laptop, which made development noticeably slower and impacted my workflow.
+Unfortunately, I experienced significant performance issues with my laptop, which made development noticeably slower and impacted my workflow (and versions of KSP in combination with Room libraries).
 I am fully aware that there are certain bugs and areas where the implementation could have been improved or optimized further. However, I genuinely gave my best effort to:
 - Maintain clean and scalable architecture
 - Follow best practices
 - Keep the codebase structured and readable
 - Demonstrate as much relevant knowledge as possible within the given timeframe
-I would be very glad to discuss with you everything about this assessment.
+Despite performance issues, I did my best to show my ambition, speed, architectural knowledge and general knowledge. I would be very glad to discuss with you everything about this assessment.
 My intention was not only to complete the assignment but also to showcase my understanding of architectural patterns and modern Android development practices.
