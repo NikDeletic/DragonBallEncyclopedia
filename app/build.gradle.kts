@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -37,10 +38,14 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
 dependencies {
+
+    implementation(project(":navigation"))
+    implementation(project(":common"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -59,6 +64,11 @@ dependencies {
     implementation(libs.insert.koin.koin.androidx.compose)
     testImplementation(libs.insert.koin.koin.test.junit4)
 
+    // Room
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+
     // HTTP
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
@@ -67,7 +77,6 @@ dependencies {
 
     // image loading
     implementation(libs.coil.compose.v330)
-    implementation(libs.coil.network.okhttp)
 
     // Testing
     testImplementation(libs.junit)
