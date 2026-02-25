@@ -1,4 +1,4 @@
-package rs.nikoladeletic.feature.home.ui.components
+package rs.nikoladeletic.feature.home.ui.screens.home.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

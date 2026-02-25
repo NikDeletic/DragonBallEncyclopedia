@@ -5,7 +5,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import rs.nikoladeletic.feature.home.ui.HomeScreen
+import androidx.navigation.toRoute
+import rs.nikoladeletic.feature.home.ui.screens.character.CharacterScreen
+import rs.nikoladeletic.feature.home.ui.screens.home.HomeScreen
 
 @Composable
 fun DragonBallNavHost(
@@ -17,7 +19,17 @@ fun DragonBallNavHost(
     ) {
         composable<HomeDestination> {
             HomeScreen(
-                navigateToSingleCharacterScreen = {}
+                navigateToSingleCharacterScreen = { characterId ->
+                    navController.navigate(CharacterDestination(characterId))
+                }
+            )
+        }
+
+        composable<CharacterDestination> { backStackEntry ->
+            val args = backStackEntry.toRoute<CharacterDestination>()
+            CharacterScreen(
+                characterId = args.characterId,
+                returnToPreviousScreen = { navController.navigateUp() }
             )
         }
     }

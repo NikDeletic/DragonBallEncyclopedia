@@ -10,6 +10,8 @@ data class Character(
     val description: String,
     val characterImage: String,
     val affiliation: String,
+    val originPlanet: OriginPlanet,
+    val transformations: List<Transformation>,
 ) {
     companion object {
         val Empty = Character(
@@ -22,6 +24,8 @@ data class Character(
             description = "Test character data",
             characterImage = "Test character data",
             affiliation = "Test character data",
+            originPlanet = OriginPlanet.Empty,
+            transformations = listOf(Transformation.Empty)
         )
     }
 }

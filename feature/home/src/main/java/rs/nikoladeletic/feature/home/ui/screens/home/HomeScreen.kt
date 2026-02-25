@@ -1,4 +1,4 @@
-package rs.nikoladeletic.feature.home.ui
+package rs.nikoladeletic.feature.home.ui.screens.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -29,7 +29,7 @@ import org.koin.androidx.compose.koinViewModel
 import rs.nikoladeletic.common.theme.DragonBallTheme
 import rs.nikoladeletic.common.ui.SearchQueryTextField
 import rs.nikoladeletic.domain.model.Character
-import rs.nikoladeletic.feature.home.ui.components.SingleCharacter
+import rs.nikoladeletic.feature.home.ui.screens.home.components.SingleCharacter
 
 @Composable
 fun HomeScreen(

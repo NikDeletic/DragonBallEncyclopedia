@@ -13,4 +13,6 @@ data class CharacterDto(
     @SerializedName("image") val characterImage: String? = null,
     @SerializedName("affiliation") val affiliation: String? = null,
     @SerializedName("deletedAt") val deletedAt: String? = null,
+    @SerializedName("originPlanet") val originPlanet: OriginPlanetDto? = null,
+    @SerializedName("transformations") val transformations: List<TransformationDto>? = null,
 )

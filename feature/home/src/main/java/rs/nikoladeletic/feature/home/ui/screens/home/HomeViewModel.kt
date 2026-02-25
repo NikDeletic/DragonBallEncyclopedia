@@ -1,4 +1,4 @@
-package rs.nikoladeletic.feature.home.ui
+package rs.nikoladeletic.feature.home.ui.screens.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
