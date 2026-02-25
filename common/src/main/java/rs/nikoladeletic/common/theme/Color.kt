@@ -16,7 +16,8 @@ val RedButtonBgGradient = listOf(
     Color(0xFFC83142),
     Color(0xFF9B0D1C),
     Color(0xFF861018),
-    Color(0xFF61060B)
+    Color(0xFF61060B),
+    Color(0xFF3F0407)
 )
 
 val OrangeButtonBgGradient = listOf(
@@ -42,9 +43,6 @@ val GrayButtonBgGradient = listOf(
     Color(0xFFE8E8E8)
 )
 
-val BottomNavigationMenuColor = Color(0xFF320106)
-val BottomNavigationMenuIconsColor = Color(0xFFFFFFFF)
-
 
 @Stable
 class DragonBallColors(
@@ -56,8 +54,6 @@ class DragonBallColors(
     greenButtonBgGradient: List<Color>,
     grayButtonBgGradient: List<Color>,
     purpleBackground: Color,
-    bottomNavigationColor: Color,
-    bottomNavigationIconsColor: Color,
     errorColor: Color,
 ) {
     var burgundyBackground by mutableStateOf(burgundyBackground)
@@ -84,12 +80,6 @@ class DragonBallColors(
     var purpleBackground by mutableStateOf(purpleBackground)
         private set
 
-    var bottomNavigationColor by mutableStateOf(bottomNavigationColor)
-        private set
-
-    var bottomNavigationIconsColor by mutableStateOf(bottomNavigationIconsColor)
-        private set
-
     var errorColor by mutableStateOf(errorColor)
         private set
 
@@ -102,8 +92,6 @@ class DragonBallColors(
         greenButtonBgGradient = other.greenButtonBgGradient
         grayButtonBgGradient = other.grayButtonBgGradient
         purpleBackground = other.purpleBackground
-        bottomNavigationColor = other.bottomNavigationColor
-        bottomNavigationIconsColor = other.bottomNavigationIconsColor
         errorColor = other.errorColor
     }
 
@@ -116,8 +104,6 @@ class DragonBallColors(
         greenButtonBgGradient = greenButtonBgGradient,
         grayButtonBgGradient = grayButtonBgGradient,
         purpleBackground = purpleBackground,
-        bottomNavigationColor = bottomNavigationColor,
-        bottomNavigationIconsColor = bottomNavigationIconsColor,
         errorColor = errorColor
     )
 }
@@ -131,8 +117,6 @@ internal val dragonBallColorPaletteLight = DragonBallColors(
     greenButtonBgGradient = GreenButtonBgGradient,
     grayButtonBgGradient = GrayButtonBgGradient,
     purpleBackground = PurpleBackground,
-    bottomNavigationColor = BottomNavigationMenuColor,
-    bottomNavigationIconsColor = BottomNavigationMenuIconsColor,
     errorColor = ErrorColor,
 )
 
@@ -145,7 +129,5 @@ internal val dragonBallColorPaletteDark = DragonBallColors(
     grayButtonBgGradient = GrayButtonBgGradient,
     redButtonBgGradient = RedButtonBgGradient,
     purpleBackground = PurpleBackground,
-    bottomNavigationColor = BottomNavigationMenuColor,
-    bottomNavigationIconsColor = BottomNavigationMenuIconsColor,
     errorColor = ErrorColor,
 )

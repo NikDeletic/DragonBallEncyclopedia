@@ -28,6 +28,17 @@ android {
                 "proguard-rules.pro"
             )
         }
+        debug {
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+            isDebuggable = true
+
+            buildConfigField(
+                "String",
+                "BASE_URL",
+                "\"https://dragonball-api.com/api/\""
+            )
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -46,11 +57,13 @@ dependencies {
 
     implementation(project(":navigation"))
     implementation(project(":common"))
+    implementation(project(":feature:home"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
@@ -62,6 +75,7 @@ dependencies {
     implementation(libs.insert.koin.koin.android)
     implementation(libs.koin.androidx.navigation)
     implementation(libs.insert.koin.koin.androidx.compose)
+    implementation(libs.androidx.navigation.compose)
     testImplementation(libs.insert.koin.koin.test.junit4)
 
     // Room
@@ -77,6 +91,7 @@ dependencies {
 
     // image loading
     implementation(libs.coil.compose.v330)
+    implementation(libs.coil.network.okhttp)
 
     // Testing
     testImplementation(libs.junit)
