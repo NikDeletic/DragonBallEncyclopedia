@@ -23,3 +23,5 @@ rootProject.name = "Nikola Deletic Dragon Ball Encyclopedia"
 include(":app")
 include(":common")
 include(":navigation")
+include(":feature:home")
+include(":domain")

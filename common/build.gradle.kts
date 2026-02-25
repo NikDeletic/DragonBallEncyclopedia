@@ -45,10 +45,12 @@ dependencies {
     implementation(libs.androidx.compiler)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.androidx.navigation.compose) // Navigation
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    debugImplementation(libs.ui.tooling)
 }
