@@ -10,7 +10,7 @@ lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.12.4"
 uiTooling = "1.10.3"
 composeBom = "2024.09.00"
-ksp = "2.3.10-1.0.29"
+ksp = "2.2.21-2.0.4"
 
 # Android Libs
 kotlinxSerializationJson = "1.10.0"
@@ -32,7 +32,7 @@ coroutines = "1.10.2"
 navigationCompose = "2.9.7"
 
 # Room (database)
-roomKtx = "2.6.1"
+roomKtx = "2.8.4"
 
 # HTTP
 retrofit = "3.0.0"

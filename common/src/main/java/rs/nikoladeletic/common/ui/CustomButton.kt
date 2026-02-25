@@ -52,8 +52,8 @@ fun CustomButton(
                 Text(
                     text = buttonText,
                     style = DragonBallTheme.typography.main.copy(
-                        fontSize = 24.sp,
-                        fontWeight = FontWeight.Bold
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.SemiBold
                     ),
                     color = DragonBallTheme.colors.primaryText
                 )
